@@ -183,6 +183,10 @@
 			<groupId>com.idega.block.egov</groupId>
 			<artifactId>is.idega.webservice</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>com.idega.block.egov</groupId>
+			<artifactId>is.idega.block.nationalregister</artifactId>
+		</dependency>
 
 		<!-- ADDON dependencies -->
 		<dependency>
