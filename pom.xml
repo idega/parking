@@ -263,54 +263,46 @@
 	</pluginRepositories>
 
 	<build>
-		<plugins>
-
-			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>buildnumber-maven-plugin</artifactId>
-				<version>1.0-beta-2</version>
-				<configuration>
-					<format>{0,date,yyyyMMdd.HHmmss}</format>
-					<items>
-						<item>timestamp</item>
-					</items>
-				</configuration>
-				<executions>
-					<execution>
-						<phase>validate</phase>
-						<goals>
-							<goal>create</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
-
-
-			<plugin>
-				<groupId>com.idega.maven.plugins</groupId>
-				<artifactId>com.idega.maven.webapp</artifactId>
-				<extensions>true</extensions>
-				<configuration>
-					<webResources>
-						<resource>
-							<directory>resources</directory>
-							<targetPath>resources</targetPath>
-						</resource>
-					</webResources>
-					<archive>
-						<manifest>
-							<!--addClasspath>true</addClasspath-->
-							<addExtensions />
-						</manifest>
-						<manifestEntries>
-							<!--Implementation-Vendor>${pom.organization.name}</Implementation-Vendor-->
-							<Implementation-Vendor-Url>${pom.organization.url}</Implementation-Vendor-Url>
-							<Implementation-Build>${buildNumber}</Implementation-Build>
-							<Implementation-InceptionYear>${pom.inceptionYear}</Implementation-InceptionYear>
-						</manifestEntries>
-					</archive>
-				</configuration>
-			</plugin>
-		</plugins>
-	</build>
+	    <plugins>
+		    <plugin>
+		      <groupId>org.codehaus.mojo</groupId>
+		      <artifactId>buildnumber-maven-plugin</artifactId>
+		      <version>1.0-beta-2</version>
+		      <configuration>
+		      	<format>{0,date,yyyyMMdd.HHmmss}</format>
+		        <items>
+		        	<item>timestamp</item>
+		        </items>
+		      </configuration>
+		      <executions>
+		        <execution>
+		          <phase>validate</phase>
+		          <goals>
+		            <goal>create</goal>
+		          </goals>
+		        </execution>
+		      </executions>
+		    </plugin>
+	    
+		    <plugin>
+		        <groupId>com.idega.maven.plugins</groupId>
+		        <artifactId>com.idega.maven.webapp</artifactId>
+		        <extensions>true</extensions>
+		        <configuration>
+		          <extractResources>true</extractResources>
+		          <archive>
+		            <manifest>
+		              <addExtensions />
+		            </manifest>
+		            <manifestEntries>
+		                <!--Implementation-Vendor>${pom.organization.name}</Implementation-Vendor-->
+		                <Implementation-Vendor-Url>${pom.organization.url}</Implementation-Vendor-Url>
+		                <Implementation-Build>${buildNumber}</Implementation-Build>
+		                <Implementation-InceptionYear>${pom.inceptionYear}</Implementation-InceptionYear>
+		            </manifestEntries>
+		          </archive>          
+		        </configuration>
+	     	 </plugin>
+	    </plugins>
+  </build>
 </project>
