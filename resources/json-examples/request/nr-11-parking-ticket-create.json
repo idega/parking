@@ -1,1 +1,45 @@
-{"startOfTicketing":"Jul 14, 2014 4:37:49 PM","endOfTicketing":"Jul 14, 2014 4:38:08 PM","streetName":"Aðalstræti (101)","streetNumber":"1","vehicle":{"vehicleID":"OK154","vehicleModel":"Daewoo","vehicleManufacturer":"Daewoo","vehicleType":"Lanos","vehicleColour":"Svartur","vehicleNumber":"OK154","length":"4237","width":"1678","height":"1432","plateStatus":"Á ökutæki","vehicleStatus":"Í lagi","vehicleGroup":"Fólksbifreið (M1)","isInsured":true,"vehicleOwners":[{"name":"Annie Marín Guðmundsdóttir","personalID":"1107892119"}],"vehicleCoOwners":[],"vehicleOperators":[],"isPaid":false,"zone":"0","hasParkingCard":false,"hasMobilePayment":false},"violatorName":"Þórhallur Helgason","violatorPersonalID":"0202774919","violatorPostalCode":"102","invoiceNumber":"0000013","amount":0,"meter":false,"violation":true}
+{
+	"startOfTicketing":"Jul 21, 2014 3:40:33 PM",
+	"endOfTicketing":"Jul 21, 2014 3:41:35 PM",
+	"streetName":"Aðalstræti (101)",
+	"streetNumber":"1",
+	"streetDescription":"Ská á móti",
+	"violationNumbers":["1","2"],
+	"vehicle":{
+		"vehicleID":"OK154",
+		"vehicleModel":"Daewoo",
+		"vehicleManufacturer":"Daewoo",
+		"vehicleType":"Lanos",
+		"vehicleColour":"Svartur",
+		"vehicleNumber":"OK154",
+		"length":"4237",
+		"width":"1678",
+		"height":"1432",
+		"plateStatus":"Á ökutæki",
+		"vehicleStatus":"Í lagi",
+		"vehicleGroup":"Fólksbifreið (M1)",
+		"isInsured":true,
+		"vehicleOwners":[
+			{
+				"name":"Annie Marín Guðmundsdóttir",
+				"personalID":"1107892119"
+			}
+		],
+		"vehicleCoOwners":[],
+		"vehicleOperators":[],
+		"isPaid":false,
+		"zone":"0",
+		"hasParkingCard":false,
+		"hasMobilePayment":false
+	},
+	"violatorName":"Þórhallur Helgason",
+	"violatorPersonalID":"0202774919",
+	"violatorPostalCode":"102",
+	"ticketNumber":"OK154-0965454",
+	"invoiceNumber":"0965454",
+	"ticketDate":"Jul 20, 2014 3:41:00 PM",
+	"paymentDate":"Aug 3, 2014 3:41:00 PM",
+	"amount":0,
+	"meter":false,
+	"violation":true
+}
