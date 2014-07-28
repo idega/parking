@@ -1,1 +1,21 @@
-{"vehicleID":"OK154","vehicleModel":"Daewoo","vehicleManufacturer":"Daewoo","vehicleType":"Lanos","vehicleColour":"Svartur","vehicleNumber":"OK154","length":"4237","width":"1678","height":"1432","plateStatus":"Á ökutæki","vehicleStatus":"Í lagi","vehicleGroup":"Fólksbifreið (M1)","isInsured":true,"vehicleOwners":[{"name":"Annie Marín Guðmundsdóttir","personalID":"1107892119"}],"vehicleCoOwners":[],"vehicleOperators":[],"isPaid":false,"zone":"0","hasParkingCard":false,"hasMobilePayment":false}
+{
+	"vehicleID":"AMD51",
+	"vehicleModel":"Peugeot",
+	"vehicleManufacturer":"Peugeot",
+	"vehicleType":"Expert",
+	"vehicleColour":"Ljósgrár",
+	"vehicleNumber":"AMD51",
+	"length":"4813",
+	"width":"1895",
+	"height":"1880",
+	"massInRo":"1786",
+	"vehicleOwners":[
+		{
+			"name":"Bílastæðasjóður Reykjavíkurborg",
+			"personalID":"5011700119"
+		}
+	],
+	"vehicleCoOwners":[],
+	"vehicleOperators":[],
+	"zone":"0"
+}
