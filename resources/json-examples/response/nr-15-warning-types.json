@@ -1,0 +1,9 @@
+[
+	{"id":1,"warningType":"Vörulosun"},
+	{"id":2,"warningType":"Framkvæmdir"},
+	{"id":3,"warningType":"Nýtt gjaldsvæði"},
+	{"id":4,"warningType":"Útrunnið P-kort fatlaðra"},
+	{"id":5,"warningType":"Útrunnið íbúakort"},
+	{"id":6,"warningType":"Vistvæn skífa ógild"},
+	{"id":7,"warningType":"Rangt gjaldsvæði"}
+]
