@@ -17,5 +17,16 @@
 	],
 	"vehicleCoOwners":[],
 	"vehicleOperators":[],
-	"zone":"0"
+	"zone":"0",
+	"insuranceCompany":"Sjóvá Almennar",
+	"insuranceStatus":true,
+	"technical":{
+		"engine":"Dísel",
+		"engineCode":"9HU",
+		"engineManufacturer":"Peugeot",
+		"noOfCylinders":"4",
+		"capacity":"1560",
+		"maxPower":"66.0",
+		"maxSpeed":"160"
+	}
 }
