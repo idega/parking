@@ -18,6 +18,7 @@
 	"vehicleCoOwners":[],
 	"vehicleOperators":[],
 	"zone":"0",
+	"leggjazone":"0",
 	"insuranceCompany":"Sjóvá Almennar",
 	"insuranceStatus":true,
 	"technical":{
