@@ -1,5 +1,5 @@
 [
-	{"ticketNumber":"AMD51-0965454","ticketDate":"Oct 24, 2014 10:35:59 AM","meter":false,"violation":false,"warning":true,"type":"Vörulosun"},
-	{"ticketNumber":"AMD51-0965852","ticketDate":"Oct 23, 2014 11:17:08 AM","meter":false,"violation":true,"warning":true,"type":"Stöðubrotsgjald"},
-	{"ticketNumber":"AMD51-0965741","ticketDate":"Oct 23, 2014 11:01:39 AM","meter":true,"violation":false,"warning":false,"type":"Aukastöðugjald"}
+	{"ticketNumber":"AMD51-0965454","ticketDate":"Oct 24, 2014 10:35:59 AM","meter":false,"violation":false,"warning":true,"type":"Vörulosun","foreignCar":false},
+	{"ticketNumber":"AMD51-0965852","ticketDate":"Oct 23, 2014 11:17:08 AM","meter":false,"violation":true,"warning":true,"type":"Stöðubrotsgjald","foreignCar":false},
+	{"ticketNumber":"AMD51-0965741","ticketDate":"Oct 23, 2014 11:01:39 AM","meter":true,"violation":false,"warning":false,"type":"Aukastöðugjald","foreignCar":false}
 ]
