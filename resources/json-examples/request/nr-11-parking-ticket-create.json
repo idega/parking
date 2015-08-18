@@ -32,6 +32,7 @@
 		"hasParkingCard":false,
 		"hasMobilePayment":false
 	},
+	"foreignCar":false,
 	"violatorName":"Þórhallur Helgason",
 	"violatorPersonalID":"0202774919",
 	"violatorPostalCode":"102",
