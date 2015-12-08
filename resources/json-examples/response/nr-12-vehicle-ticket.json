@@ -1,5 +1,73 @@
 [
-	{"ticketNumber":"AMD51-0965454","ticketDate":"Oct 24, 2014 10:35:59 AM","meter":false,"violation":false,"warning":true,"type":"Vörulosun","foreignCar":false},
-	{"ticketNumber":"AMD51-0965852","ticketDate":"Oct 23, 2014 11:17:08 AM","meter":false,"violation":true,"warning":true,"type":"Stöðubrotsgjald","foreignCar":false},
-	{"ticketNumber":"AMD51-0965741","ticketDate":"Oct 23, 2014 11:01:39 AM","meter":true,"violation":false,"warning":false,"type":"Aukastöðugjald","foreignCar":false}
+	{
+		"ticketNumber":"AMD51-0965454",
+		"ticketDate":"Oct 24, 2014 10:35:59 AM",
+		"meter":false,
+		"violation":false,
+		"warning":true,
+		"warningType":"Útrunnið íbúakort",
+		"numberOfWarnings":1,
+		"type":"Vörulosun",
+		"foreignCar":false,
+		"vehicle":{
+			"vehicleModel":"Peugeot",
+			"vehicleManufacturer":"Peugeot",
+			"vehicleType":"Expert",
+			"vehicleColour":"Ljósgrár"
+		},
+		"ticketOfficer":{
+			"officerID":1,
+			"number":"1",
+			"name":"Officer Full Name"
+		}
+	},
+	{
+		"ticketNumber":"AMD51-0965852",
+		"ticketDate":"Oct 23, 2014 11:17:08 AM",
+		"meter":false,
+		"violation":true,
+		"streetName":"Fríkirkjuvegur (101)",
+		"streetNumber":"3",
+		"streetDescription":"Við",
+		"violationNumbers":[
+			"1"
+		]
+		"warning":false,
+		"numberOfWarnings":1,
+		"type":"Stöðubrotsgjald",
+		"foreignCar":false,
+		"vehicle":{
+			"vehicleModel":"Peugeot",
+			"vehicleManufacturer":"Peugeot",
+			"vehicleType":"Expert",
+			"vehicleColour":"Ljósgrár"
+		},
+		"ticketOfficer":{
+			"officerID":1,
+			"number":"1",
+			"name":"Officer Full Name"
+		}
+	},
+	{
+		"ticketNumber":"AMD51-0965741",
+		"ticketDate":"Oct 23, 2014 11:01:39 AM",
+		"meter":true,
+		"meterNumber":"9059",
+		"violation":false,
+		"warning":false,
+		"numberOfWarnings":1,
+		"type":"Aukastöðugjald",
+		"foreignCar":false,
+		"vehicle":{
+			"vehicleModel":"Peugeot",
+			"vehicleManufacturer":"Peugeot",
+			"vehicleType":"Expert",
+			"vehicleColour":"Ljósgrár"
+		},
+		"ticketOfficer":{
+			"officerID":1,
+			"number":"1",
+			"name":"Officer Full Name"
+		}
+	}
 ]
