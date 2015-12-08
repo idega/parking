@@ -28,6 +28,13 @@
 		"noOfCylinders":"4",
 		"capacity":"1560",
 		"maxPower":"66.0",
-		"maxSpeed":"160"
+		"maxSpeed":"160",
+		"remarks": [
+			{
+				"date":"2012-11-05",
+				"text":"Aukabúnaður Metan",
+				"invalidDate":"0001-01-01"
+			}
+		]
 	}
 }
