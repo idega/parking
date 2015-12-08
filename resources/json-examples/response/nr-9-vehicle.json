@@ -12,7 +12,9 @@
 	"vehicleOwners":[
 		{
 			"name":"Bílastæðasjóður Reykjavíkurborg",
-			"personalID":"5011700119"
+			"personalID":"5011700119",
+			"address":"Vonarstræti 4",
+			"postalCode":"101"
 		}
 	],
 	"vehicleCoOwners":[],
