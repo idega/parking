@@ -136,10 +136,6 @@
 		</dependency>
 		<dependency>
 			<groupId>com.idega.block.addon</groupId>
-			<artifactId>com.idega.block.ldap</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>com.idega.block.addon</groupId>
 			<artifactId>com.idega.block.news</artifactId>
 		</dependency>
 		<dependency>
@@ -207,6 +203,12 @@
 		<dependency>
 			<groupId>com.idega.block.egov</groupId>
 			<artifactId>is.idega.webservice</artifactId>
+			<exclusions>
+				<exclusion>
+					<groupId>org.bouncycastle</groupId>
+					<artifactId>bcprov-jdk15on</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 		<dependency>
 			<groupId>com.idega.block.egov</groupId>
@@ -217,6 +219,12 @@
 		<dependency>
 			<groupId>com.idega.block.private</groupId>
 			<artifactId>is.idega.idegaweb.egov.fsk</artifactId>
+			<exclusions>
+				<exclusion>
+					<groupId>poi</groupId>
+					<artifactId>poi</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 		
 		<!-- Solution -->
