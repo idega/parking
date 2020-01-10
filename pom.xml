@@ -145,6 +145,12 @@
 		<dependency>
 			<groupId>com.idega.block.addon</groupId>
 			<artifactId>com.idega.block.form</artifactId>
+			<exclusions>
+	  		  	<exclusion>
+	  				<groupId>commons-codec</groupId>
+	  				<artifactId>commons-codec</artifactId>
+	  			</exclusion>
+	  		</exclusions>
 		</dependency>
 		<dependency>
 			<groupId>com.idega.block.addon</groupId>
@@ -164,6 +170,34 @@
 			<groupId>com.idega.block.addon</groupId>
 			<artifactId>com.idega.block.beanshell</artifactId>
 		</dependency>
+		<dependency>
+			<groupId>com.idega.block.addon</groupId>
+			<artifactId>com.idega.bpm</artifactId>
+		</dependency>
+		<dependency>
+	      <groupId>com.idega.block.addon</groupId>
+	      <artifactId>com.idega.restful</artifactId>
+	      <exclusions>
+	      	<exclusion>
+	      		<groupId>com.sun.xml.bind</groupId>
+	      		<artifactId>jaxb-impl</artifactId>
+	      	</exclusion>
+	      </exclusions>
+		</dependency>
+		<dependency>
+	      <groupId>com.idega.block.addon</groupId>
+	      <artifactId>com.idega.block.oauth2.server</artifactId>
+	      <exclusions>
+	  			<exclusion>
+	  				<groupId>commons-codec</groupId>
+	  				<artifactId>commons-codec</artifactId>
+	  			</exclusion>
+	      </exclusions>
+	    </dependency>
+	    <dependency>
+	      <groupId>com.idega.block.addon</groupId>
+	      <artifactId>com.idega.portal</artifactId>
+	    </dependency>
 
 		<!-- eGov dependencies -->
 		<dependency>
@@ -192,6 +226,14 @@
 					</artifactId>
 					<groupId>com.idega.block.addon</groupId>
 				</exclusion>
+				<exclusion>
+	  				<groupId>commons-codec</groupId>
+	  				<artifactId>commons-codec</artifactId>
+	  			</exclusion>
+	  			<exclusion>
+	  				<groupId>org.apache.santuario</groupId>
+	  				<artifactId>xmlsec</artifactId>
+	  			</exclusion>
 			</exclusions>
 		</dependency>
 		<dependency>
@@ -243,6 +285,34 @@
 					<artifactId>bcprov-jdk16</artifactId>
 				</exclusion>
 			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>com.idega.block.private</groupId>
+			<artifactId>com.idega.camunda</artifactId>
+			<exclusions>
+				<exclusion>
+					<groupId>org.glassfish.jersey.core</groupId>
+					<artifactId>jersey-client</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>com.idega.block.private</groupId>
+			<artifactId>com.idega.egov.dashboard</artifactId>
+			<exclusions>
+				<exclusion>
+					<groupId>org.bouncycastle</groupId>
+					<artifactId>bcprov-jdk16</artifactId>
+				</exclusion>
+	  			<exclusion>
+	  				<groupId>commons-codec</groupId>
+	  				<artifactId>commons-codec</artifactId>
+	  			</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>com.idega.block.private</groupId>
+			<artifactId>com.idega.cloud.process</artifactId>
 		</dependency>
 	</dependencies>
 
