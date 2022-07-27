@@ -198,6 +198,10 @@
 	      <groupId>com.idega.block.addon</groupId>
 	      <artifactId>com.idega.portal</artifactId>
 	    </dependency>
+	    <dependency>
+	      <groupId>com.idega.block.addon</groupId>
+	      <artifactId>com.idega.block.trade</artifactId>
+	    </dependency>
 		<dependency>
 	      <groupId>com.idega.block.addon</groupId>
 	      <artifactId>com.idega.block.creditcard</artifactId>
