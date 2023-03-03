@@ -59,6 +59,12 @@
 		<dependency>
 			<groupId>com.idega.block.platform</groupId>
 			<artifactId>com.idega.block.image</artifactId>
+			<exclusions>
+				<exclusion>
+					<groupId>org.apache.axis</groupId>
+					<artifactId>axis</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 		<dependency>
 			<groupId>com.idega.block.platform</groupId>
@@ -110,10 +116,6 @@
 		</dependency>
 		<dependency>
 			<groupId>com.idega.block.platform</groupId>
-			<artifactId>org.apache.axis</artifactId>
-		</dependency>
-		<dependency>
-			<groupId>com.idega.block.platform</groupId>
 			<artifactId>com.idega.graphics</artifactId>
 		</dependency>
 		<dependency>
@@ -127,6 +129,32 @@
 		<dependency>
 			<groupId>com.idega.block.platform</groupId>
 			<artifactId>com.idega.block.process.webservice</artifactId>
+			<exclusions>
+				<exclusion>
+					<groupId>org.apache.axis</groupId>
+					<artifactId>axis</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>axis</groupId>
+					<artifactId>axis-schema</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.apache.axis</groupId>
+					<artifactId>axis-ant</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.apache.axis</groupId>
+					<artifactId>axis-jaxrpc</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.apache.axis</groupId>
+					<artifactId>axis-saaj</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>com.idega.block.platform</groupId>
+					<artifactId>org.apache.axis</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 		
 		<!-- ADDON dependencies -->
@@ -197,10 +225,22 @@
 	    <dependency>
 	      <groupId>com.idega.block.addon</groupId>
 	      <artifactId>com.idega.portal</artifactId>
+	      <exclusions>
+	      	<exclusion>
+	      		<groupId>com.idega.block.platform</groupId>
+	      		<artifactId>org.apache.axis</artifactId>
+	      	</exclusion>
+	      </exclusions>
 	    </dependency>
 	    <dependency>
 	      <groupId>com.idega.block.addon</groupId>
 	      <artifactId>com.idega.block.trade</artifactId>
+	      <exclusions>
+	      	<exclusion>
+	      		<groupId>com.idega.block.platform</groupId>
+	      		<artifactId>org.apache.axis</artifactId>
+	      	</exclusion>
+	      </exclusions>
 	    </dependency>
 		<dependency>
 	      <groupId>com.idega.block.addon</groupId>
@@ -250,6 +290,18 @@
                 	<groupId>com.fasterxml.jackson.core</groupId>
                 	<artifactId>jackson-databind</artifactId>
                 </exclusion>
+                <exclusion>
+                	<groupId>org.apache.axis</groupId>
+                	<artifactId>axis</artifactId>
+                </exclusion>
+                <exclusion>
+                	<groupId>org.apache.axis</groupId>
+                	<artifactId>axis-jaxrpc</artifactId>
+                </exclusion>
+                <exclusion>
+                	<groupId>com.idega.block.platform</groupId>
+                	<artifactId>org.apache.axis</artifactId>
+                </exclusion>
 			</exclusions>
 		</dependency>
 		<dependency>
@@ -272,11 +324,29 @@
 					<groupId>org.bouncycastle</groupId>
 					<artifactId>bcprov-jdk15on</artifactId>
 				</exclusion>
+				<exclusion>
+					<groupId>org.apache.axis</groupId>
+					<artifactId>axis</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.apache.axis</groupId>
+					<artifactId>axis-jaxrpc</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>com.idega.block.platform</groupId>
+					<artifactId>org.apache.axis</artifactId>
+				</exclusion>
 			</exclusions>
 		</dependency>
 		<dependency>
 			<groupId>com.idega.block.egov</groupId>
 			<artifactId>is.idega.block.nationalregister</artifactId>
+			<exclusions>
+				<exclusion>
+					<groupId>com.idega.block.platform</groupId>
+					<artifactId>org.apache.axis</artifactId>
+				</exclusion>
+			</exclusions>
 		</dependency>
 		
 		<!-- To fix fsk_course group type error in Hibernate -->
@@ -287,6 +357,18 @@
 				<exclusion>
 					<groupId>poi</groupId>
 					<artifactId>poi</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.apache.axis</groupId>
+					<artifactId>axis</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>org.apache.axis</groupId>
+					<artifactId>axis-jaxrpc</artifactId>
+				</exclusion>
+				<exclusion>
+					<groupId>com.idega.block.platform</groupId>
+					<artifactId>org.apache.axis</artifactId>
 				</exclusion>
 			</exclusions>
 		</dependency>
