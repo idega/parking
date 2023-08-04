@@ -304,21 +304,11 @@
 					<groupId>org.bouncycastle</groupId>
 					<artifactId>bcprov-jdk15on</artifactId>
 				</exclusion>
-			</exclusions>
-		</dependency>
-		<dependency>
-			<groupId>com.idega.block.egov</groupId>
-			<artifactId>is.idega.block.nationalregister</artifactId>
-		</dependency>
-		
-		<!-- To fix fsk_course group type error in Hibernate -->
-		<dependency>
-			<groupId>com.idega.block.private</groupId>
-			<artifactId>is.idega.idegaweb.egov.fsk</artifactId>
-			<exclusions>
 				<exclusion>
-					<groupId>poi</groupId>
-					<artifactId>poi</artifactId>
+					<groupId>com.idega.block.egov</groupId>
+					<artifactId>
+						is.idega.idegaweb.egov.accounting
+					</artifactId>
 				</exclusion>
 			</exclusions>
 		</dependency>
@@ -359,6 +349,12 @@
 	  			<exclusion>
 	  				<groupId>commons-codec</groupId>
 	  				<artifactId>commons-codec</artifactId>
+	  			</exclusion>
+	  			<exclusion>
+	  				<groupId>com.idega.block.egov</groupId>
+	  				<artifactId>
+	  					is.idega.block.nationalregister
+	  				</artifactId>
 	  			</exclusion>
 			</exclusions>
 		</dependency>
