@@ -1,0 +1,217 @@
+openapi: 3.0.3
+info:
+  title: Parking permit
+  description: |-
+    API to create applicaiton for parking permit and get status of application
+  contact:
+    email: valdas@idega.com
+  version: 1.0.0
+externalDocs:
+  description: Find out more about API
+  url: https://github.com/idega/parking/wiki/API-for-parking-permit
+servers:
+  - url: https://reykjavik.azure.parking.idega.is/parking/api/1.0/permit
+tags:
+  - name: application
+    description: Create application
+  - name: status
+    description: Get status of application
+paths:
+  /application:
+    post:
+      tags:
+        - application
+      summary: Create new application
+      requestBody:
+        description: Create new application
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/Application'
+        required: true
+      responses:
+        '200':
+          description: Successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ApplicationResult'
+      security:
+        - api_key:
+            - write:application
+  /status/{id}:
+    get:
+      tags:
+        - status
+      summary: Get status of parking permit application
+      description: Provide ID of parking permit application
+      parameters:
+        - name: id
+          in: path
+          description: ID of parking permit application that status needs to be checked
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: successful operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Status'
+      security:
+        - api_key:
+            - read:status
+components:
+  schemas:
+    Info:
+      required:
+        - name
+        - personalId
+      type: object
+      properties:
+        name:
+          type: string
+          description: Applicant's name
+        personalId:
+          type: string
+          description: Applicant's personal ID
+        email:
+          type: string
+        phoneNo:
+          type: string
+    Housing:
+      required:
+        - domicile
+        - postalCode
+        - apartmentNo
+      type: object
+      properties:
+        domicile:
+          type: string
+        postalCode:
+          type: string
+        apartmentNo:
+          type: string
+        noIncludedParkingSpace:
+          type: boolean
+    DataCollection:
+      required:
+        - agreeToTerms
+      type: object
+      properties:
+        agreeToTerms:
+          type: boolean
+    Vehicle:
+      required:
+        - regNo
+      type: object
+      properties:
+        regNo:
+          type: string
+    PaymentPlan:
+      required:
+        - split
+      type: object
+      properties:
+        split:
+          type: integer
+          description: Value from range >= 1 and <= 12
+        payment:
+          type: string
+          description: Applicant's comment regarding payment
+    OtherInfo:
+      type: object
+      properties:
+        comment:
+          type: string
+    Attachment:
+      required:
+        - fileName
+        - bytesEncoded
+      type: object
+      properties:
+        fileName:
+          type: string
+        bytesEncoded:
+          type: string
+          description: File's bytes encoded in Base 64 format
+        mimeType:
+          type: string
+    ParkingPermitApplication:
+      required:
+        - info
+        - housing
+        - dataCollection
+        - vehicle
+        - paymentPlan
+      type: object
+      properties:
+        info:
+          $ref: '#/components/schemas/Info'
+        housing:
+          $ref: '#/components/schemas/Housing'
+        dataCollection:
+          $ref: '#/components/schemas/DataCollection'
+        vehicle:
+          $ref: '#/components/schemas/Vehicle'
+        paymentPlan:
+          $ref: '#/components/schemas/PaymentPlan'
+        otherInfo:
+          $ref: '#/components/schemas/OtherInfo'
+        parkingZone:
+          type: string
+          description: Name of parking zone applicant applies for
+        propertyOwnersAgreement:
+          $ref: '#/components/schemas/Attachment'
+        carRentalAgreement:
+          $ref: '#/components/schemas/Attachment'
+        otherAttachment:
+          $ref: '#/components/schemas/Attachment'
+          
+    Application:
+      required:
+        - parkingPermitApplication
+      type: object
+      properties:
+        parkingPermitApplication:
+          $ref: '#/components/schemas/ParkingPermitApplication'
+    ApplicationResult:
+      type: object
+      properties:
+        parkingPermitApplicationId:
+          type: string
+          description: Unique ID of successfully created application
+        success:
+          type: boolean
+        error:
+          type: boolean
+        message:
+          type: string
+    Status:
+      type: object
+      properties:
+        status:
+          type: string
+          enum:
+            - approved
+            - denied
+            - in_progress
+            - closed
+            - received
+        error:
+          type: boolean
+        message:
+          type: string
+  requestBodies:
+    Application:
+      description: Application object
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/Application'
+  securitySchemes:
+    api_key:
+      type: apiKey
+      name: Authorization
+      in: header
