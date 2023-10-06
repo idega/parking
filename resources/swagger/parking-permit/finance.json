@@ -1,0 +1,83 @@
+openapi: 3.0.3
+info:
+  title: Finance system
+  description: |-
+    API for finance system
+  contact:
+    email: valdas@idega.com
+  version: 1.0.0
+externalDocs:
+  description: Find out more about API
+  url: https://github.com/idega/parking/wiki/API-for-financial-system
+servers:
+  - url: https://reykjavik.azure.parking.idega.is/parking/api/1.0/finance
+tags:
+  - name: paidTicket
+paths:
+  /entries/paid:
+    post:
+      tags:
+        - paidTicket
+      summary: Mark ticket as paid
+      requestBody:
+        description: Mark ticket as paid
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PaidTicket'
+        required: true
+      responses:
+        '200':
+          description: Outcome about operation
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Result'
+      security:
+        - api_key:
+            - write:paidTicket
+components:
+  schemas:
+    PaidTicket:
+      required:
+        - ticketNumber
+        - paidAmount
+        - date
+      type: object
+      properties:
+        ticketNumber:
+          type: string
+        paidAmount:
+          type: integer
+          description: Amount that was paid
+        date:
+          type: string
+          format: date-time
+          description: When payment was made
+    Result:
+      type: object
+      properties:
+        status:
+          type: integer
+          description: HTTP code, i.e. 200 if operation succeeded
+        name:
+          type: string
+          enum:
+            - error
+            - success
+          description: Informs if opertation succeeded
+        value:
+          type: string
+          description: Information about outcome of operation
+  requestBodies:
+    PaidTicket:
+      description: Information about paid ticket
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/PaidTicket'
+  securitySchemes:
+    api_key:
+      type: apiKey
+      name: Authorization
+      in: header
