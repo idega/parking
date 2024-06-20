@@ -32,33 +32,24 @@ phases:
       - export readonly CODEARTIFACT_AUTH_TOKEN=$(aws codeartifact get-authorization-token --domain $IW_CODE_ART_DOMAIN --domain-owner $IW_CODE_ART_DOMAIN_OWNER --query authorizationToken --output text --region $IW_CODE_ART_DOMAIN_REGION)
       - cd $CODEBUILD_SRC_DIR_PLATFORM
       - git checkout BRANCH_PLATFORM_5
-      - git pull
       - git submodule update --init --recursive --remote
       - git submodule foreach git checkout BRANCH_PLATFORM_5
-      - git submodule foreach git pull
       - cd $CODEBUILD_SRC_DIR_ADDON
       - git checkout BRANCH_PLATFORM_5
-      - git pull
       - git submodule update --init --recursive --remote
       - git submodule foreach git checkout BRANCH_PLATFORM_5
-      - git submodule foreach git pull
       - cd $CODEBUILD_SRC_DIR_EGOV
       - git checkout BRANCH_PLATFORM_5
-      - git pull
       - git submodule update --init --recursive --remote
       - git submodule foreach git checkout BRANCH_PLATFORM_5
-      - git submodule foreach git pull
       - cd $CODEBUILD_SRC_DIR_PRIVATE
       - git checkout BRANCH_PLATFORM_5
-      - git pull
       - git submodule update --init --recursive --remote
       - git submodule foreach git checkout BRANCH_PLATFORM_5
-      - git submodule foreach git pull
       - cd $CODEBUILD_SRC_DIR_PRIVATE/com.idega.camunda
       - git checkout field-attribute
       - cd $CODEBUILD_SRC_DIR_WEBAPP
       - git checkout BRANCH_PLATFORM_5
-      - git pull
   build:
     run-as: root
     on-failure: ABORT
@@ -77,6 +68,8 @@ phases:
       - mvn clean package install -DskipTests
 artifacts:
   files:
-    - '**/*'
+    - '**/*.war'
   base-directory: 'target'
-
+cache:
+  paths:
+    - '$HOME/.m2/**/*'
